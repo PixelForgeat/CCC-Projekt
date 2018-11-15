@@ -2,6 +2,7 @@
 *.vcxproj
 *.vcxproj.filters
 *.xcodeproj
+*.DS_Store
 *.suo
 *.VC.db
 *.sqlite
