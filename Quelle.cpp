@@ -1,5 +1,5 @@
 #include <iostream>
-#include <conio.h>
+#include <string>
 #include "CCCParser.h"
 #include "List.h"
 
@@ -10,13 +10,11 @@ int main(int Kot)
 	List<string> lStringParts;
 	List<string> lAllParts;
 	List<int> lIntParts;
-	CCCParser::parseFileInput("hi.txt", lStringParts, lIntParts, lAllParts );
+    CCCParser::parseFileInput("hi.txt", lStringParts, lIntParts, lAllParts );
 
-	for (int i = 0; i < lStringParts.Length(); i++)
-	{
-		lStringParts[i];
-	}
-
-	_getch();
+    for (int i = 0; i < lAllParts.Length(); i++) {
+        cout << lAllParts[i] << endl;
+    }
+    
 	return Kot;
 }
