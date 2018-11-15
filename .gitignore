@@ -1,6 +1,3 @@
-*.sln
-*.vcxproj
-*.vcxproj.filters
 *.xcodeproj
 *.DS_Store
 *.suo
