@@ -127,6 +127,10 @@ public:
 		{
 			if (i == iIndex)
 			{
+				if (pBuffer == m_pPosition)
+				{
+					m_pPosition = m_pPosition->m_pNext;
+				}
 				pBuffer->m_pPrev->m_pNext = pBuffer->m_pNext;
 				pBuffer->m_pNext->m_pPrev = pBuffer->m_pPrev;
 				delete pBuffer;
@@ -136,6 +140,24 @@ public:
 			}
 		}
 		std::cout << "Index out of Range." << std::endl;
+	}
+
+	void remove(T& ElementToRemove)
+	{
+		Node<T>* pBuffer = m_pStart->m_pNext;
+		while (&(pBuffer->m_Data) != ElementToRemove)
+		{
+			pBuffer++;
+		}
+		if (pBuffer == m_pPosition)
+		{
+			m_pPosition = m_pPosition->m_pNext;
+		}
+		m_iSize--;
+		pBuffer->m_pPrev->m_pNext = pBuffer->m_pNext;
+		pBuffer->m_pNext->m_pPrev = pBuffer->m_pPrev;
+		delete pBuffer;
+		pBuffer = nullptr;
 	}
 
 	T& currentElement()

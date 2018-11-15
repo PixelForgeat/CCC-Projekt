@@ -14,8 +14,16 @@ int main(int Kot)
 
 	CCCParser::printToFile("xd.txt", lIntParts);
 
-    for (lIntParts = 0; lIntParts < lIntParts.Length(); lIntParts++) {
-         cout << lIntParts.currentElement() << " ";
-    }
+	for (lAllParts.begin(); lAllParts < lAllParts.Length(); ) {
+		cout << lAllParts++ << " ";
+	}
+	cout << endl;
+	for (lStringParts.begin(); lStringParts < lStringParts.Length(); ) {
+		cout << lStringParts++ << " ";
+	}
+	cout << endl;
+	for (lIntParts.begin() ; lIntParts < lIntParts.Length(); ) {
+		cout << lIntParts++ << " ";
+	}
 	return Kot;
 }
