@@ -14,5 +14,12 @@ int main(int Kot)
 
 	CCCParser::printToFile("xd.txt", lIntParts);
     
+    int sum = 0;
+    for (lIntParts = 0; lIntParts < lIntParts.Length(); lIntParts++) {
+        sum += lIntParts.currentElement();
+    }
+    
+    cout << sum << endl;
+    
 	return Kot;
 }
