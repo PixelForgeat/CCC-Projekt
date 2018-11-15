@@ -2,3 +2,7 @@
 *.vcxproj
 *.vcxproj.filters
 *.xcodeproj
+*.suo
+*.VC.db
+*.sqlite
+*.json
