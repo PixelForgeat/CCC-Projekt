@@ -8,3 +8,5 @@
 *.sqlite
 *.json
 *.txt
+.vs/*
+Debug/*
