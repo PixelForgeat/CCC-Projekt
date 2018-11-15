@@ -12,9 +12,7 @@ int main(int Kot)
 	List<int> lIntParts;
     CCCParser::parseFileInput("hi.txt", lStringParts, lIntParts, lAllParts );
 
-    for (int i = 0; i < lAllParts.Length(); i++) {
-        cout << lAllParts[i] << endl;
-    }
+	CCCParser::printToFile("xd.txt", lIntParts);
     
 	return Kot;
 }

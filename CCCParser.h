@@ -11,12 +11,12 @@ class CCCParser
 public:
 	CCCParser() {};
 	virtual ~CCCParser() {};
-	static void parseFileInput(std::string sFilePath, List<std::string>& lStringParts, List<int>& lIntParts, List<std::string>& lAllAsString )
+	static void parseFileInput(std::string sFilePath, List<std::string>& lStringParts, List<int>& lIntParts, List<std::string>& lAllAsString)
 	{
 		std::ifstream fInputFile;
 		std::string sFileContent;
 		fInputFile.open(sFilePath);
-		
+
 		while (true)
 		{
 			sFileContent.clear();
@@ -29,7 +29,7 @@ public:
 			std::string::const_iterator it = sFileContent.begin();
 			while (it != sFileContent.end() && isdigit(*it)) ++it;
 
-			if ( it == sFileContent.end() )
+			if (it == sFileContent.end())
 			{
 				lIntParts.append(std::stoi(sFileContent));
 			}
@@ -40,6 +40,34 @@ public:
 			lAllAsString.append(sFileContent);
 		}
 		fInputFile.close();
+	}
+
+	static void printToFile(std::string sFilePath, List<std::string>& lStuffToWrite)
+	{
+		std::ofstream fOutputFile;
+		std::string sFileContent;
+		fOutputFile.open(sFilePath);
+
+		for (lStuffToWrite.begin(); lStuffToWrite < lStuffToWrite.Length();)
+		{
+			fOutputFile << lStuffToWrite++ << " ";
+		}
+
+		fOutputFile.close();
+	}
+
+	static void printToFile(std::string sFilePath, List<int>& lStuffToWrite)
+	{
+		std::ofstream fOutputFile;
+		std::string sFileContent;
+		fOutputFile.open(sFilePath);
+
+		for (lStuffToWrite.begin(); lStuffToWrite < lStuffToWrite.Length();)
+		{
+			fOutputFile << lStuffToWrite++ << " ";
+		}
+
+		fOutputFile.close();
 	}
 };
 

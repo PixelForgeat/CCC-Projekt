@@ -74,6 +74,12 @@ public:
 	{
 		return m_iSize;
 	}
+
+	void begin()
+	{
+		m_iPosition = 0;
+		m_pPosition = m_pStart->m_pNext;
+	}
 	
 	void append(T Data)
 	{
@@ -134,7 +140,7 @@ public:
 
 	T& currentElement()
 	{
-		return m_pPosition;
+		return m_pPosition->m_Data;
 	}
 
 	//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
