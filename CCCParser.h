@@ -27,7 +27,7 @@ public:
 			}
 
 			std::string::const_iterator it = sFileContent.begin();
-			while (it != sFileContent.end() && isdigit(*it)) ++it;
+			while (it != sFileContent.end() && (isdigit(*it) || *it == '-' )) ++it;
 
 			if (it == sFileContent.end())
 			{
