@@ -10,22 +10,15 @@ int main(int Kot)
 	List<string> lStringParts;
 	List<string> lAllParts;
 	List<int> lIntParts;
-    CCCParser::parseFileInput("hi.txt", lStringParts, lIntParts, lAllParts );
+    CCCParser::parseFileInput("input.txt", lStringParts, lIntParts, lAllParts );
 
-	CCCParser::printToFile("xd.txt", lIntParts);
 
-	for (lAllParts.begin(); lAllParts < lAllParts.Length(); ) {
-		cout << lAllParts++ << " ";
-	}
-	cout << endl;
-	for (lStringParts.begin(); lStringParts < lStringParts.Length(); ) {
-		cout << lStringParts++ << " ";
-	}
-	cout << endl;
-	for (lIntParts.begin() ; lIntParts < lIntParts.Length(); ) {
-		cout << lIntParts++ << " ";
-	}
-    
-    cout << endl;
+	// CCC code start
+
+
+	// CCC code end
+
+	CCCParser::printToFile("output.txt", lIntParts);
+	cin.get();
 	return Kot;
 }
