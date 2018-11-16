@@ -25,5 +25,7 @@ int main(int Kot)
 	for (lIntParts.begin() ; lIntParts < lIntParts.Length(); ) {
 		cout << lIntParts++ << " ";
 	}
+    
+    cout << endl;
 	return Kot;
 }
