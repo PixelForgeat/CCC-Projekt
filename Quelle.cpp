@@ -10,7 +10,7 @@ int main(int Kot)
 	List<string> lStringParts;
 	List<string> lAllParts;
 	List<int> lIntParts;
-    CCCParser::parseFileInput("input.txt", lStringParts, lIntParts, lAllParts );
+    CCCParser::parseFileInput("level1_4.in", lStringParts, lIntParts, lAllParts );
 
 
 	// CCC code start
@@ -36,6 +36,5 @@ int main(int Kot)
 	// CCC code end
 
 	CCCParser::printToFile("output.txt", output);
-	cin.get();
 	return Kot;
 }
