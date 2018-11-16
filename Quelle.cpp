@@ -15,10 +15,27 @@ int main(int Kot)
 
 	// CCC code start
 
+	int sum = 0;
+
+	List<int> output;
+
+	for (lIntParts = 2; lIntParts < lIntParts.Length(); )
+	{
+		sum += lIntParts++;
+	}
+
+	if (sum > 0)
+	{
+		output.append(1);
+	}
+	else
+	{
+		output.append(0);
+	}
 
 	// CCC code end
 
-	CCCParser::printToFile("output.txt", lIntParts);
+	CCCParser::printToFile("output.txt", output);
 	cin.get();
 	return Kot;
 }
